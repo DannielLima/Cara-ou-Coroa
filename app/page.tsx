@@ -31,15 +31,11 @@ export default function Home() {
           Cara
         </div>
         {/* Verso: Coroa */}
-        <div className={`absolute inset-0 flex justify-center items-center rounded-full text-2xl font-bold backface-hidden bg-gray-400 transform rotate-y-180 ${flipClass === "rotateY-0" ? "hidden" : ""}`}>
+        <div className={`absolute inset-0 flex justify-center items-center rounded-full text-2xl font-bold backface-hidden bg-gray-400 ${flipClass === "rotateY-0" ? "hidden" : "rotate-y-180"}`}>
           Coroa
         </div>
       </div>
-
-      {result && !isFlipping && (
-        <p className="text-2xl mt-4">Resultado: {result}</p>
-      )}
-
+      
       <button
         onClick={flipCoin}
         className="mt-6 px-6 py-3 bg-blue-600 rounded-full text-lg font-semibold hover:bg-blue-700 transition disabled:bg-blue-400"
